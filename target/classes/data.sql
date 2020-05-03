@@ -18,16 +18,22 @@ INSERT INTO user_dictionary ( id,
 COMMIT;
 INSERT INTO question (id,
                       message,
+                      carma_point,
+                      hard_level,
+                      chat_mentor,
                       category,
                       id_student)
               VALUES ('1',
                       'what is phys?',
+                      '3',
+                      'EASY',
+                      'FALSE',
                       'physics',
                       '1');
 COMMIT;
 INSERT INTO answer (id,
                     message,
-                    point,
+                    carma_point,
                     id_mentor,
                     id_question)
               VALUES ('1',

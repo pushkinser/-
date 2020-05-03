@@ -10,6 +10,9 @@ CREATE TABLE IF NOT EXISTS public.user_dictionary (
 CREATE TABLE IF NOT EXISTS public.question (
   id    SERIAL PRIMARY KEY,
   message  VARCHAR NOT NULL,
+  carma_point INT,
+  hard_level VARCHAR NOT NULL,
+  chat_mentor BOOLEAN,
   category VARCHAR NOT NULL,
   id_student INT NOT NULL,
   CONSTRAINT "FK_id_student" FOREIGN KEY ("id_student")
@@ -19,7 +22,7 @@ CREATE TABLE IF NOT EXISTS public.question (
  CREATE TABLE IF NOT EXISTS public.answer (
     id SERIAL PRIMARY KEY,
     message VARCHAR NOT NULL,
-    point INT,
+    carma_point INT,
     id_mentor INT NOT NULL,
     id_question INT NOT NULL,
     CONSTRAINT "FK_id_mentor" FOREIGN KEY ("id_mentor")
