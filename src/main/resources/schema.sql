@@ -10,6 +10,7 @@ CREATE TABLE IF NOT EXISTS public.user_dictionary (
 CREATE TABLE IF NOT EXISTS public.question (
   id    SERIAL PRIMARY KEY,
   message  VARCHAR NOT NULL,
+  theme VARCHAR NOT NULL,
   carma_point INT,
   hard_level VARCHAR NOT NULL,
   chat_mentor BOOLEAN,

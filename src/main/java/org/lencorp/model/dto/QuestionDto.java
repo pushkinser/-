@@ -13,6 +13,8 @@ public class QuestionDto {
 
     private String message;
 
+    private String theme;
+
     private int carmaPoint;
 
     private String hardLevel;

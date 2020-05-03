@@ -20,10 +20,27 @@
         </svg>
     </a>
 </nav>
+<div class="row container quest">
 
-<div class="container" id="question-area">
-    <a type="button" href = "askQuestion.html" class="btn btn-success addQ">Ask a Question</a>
+    <div class="container col-lg-6">
+    <form class="quesArea" action="">
+        <p><b>Введите ваш вопрос:</b></p>
+        <p><textarea name="comment" class="textQ"></textarea></p>
+        <p><b>Выберрите предмет:</b></p>
+        <p><input type="text"></p>
+        <p><a type="button"  class="btn btn-success">Задать вопрос</a></p>
+    </form>
+    </div>
+    <div class="container col-lg-6">
+    <aside class="quesArea">
+        <p><b>Как задать:</b></p>
+        <p class="alert alert-secondary">Оформите подробно свой вопрос: распишите проблему, напишите сам пример (если имеется), придумайте правильный заголовок, для актуального оторбражения темы.</p>
+        <p class="alert alert-secondary">Начните вводить предмет вопроса, система подберет вам нужную.</p>
+        <p class="alert alert-secondary">Нажмите задать вопрос, для публикации.</p>
+    </aside>
+    </div>
 </div>
+
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

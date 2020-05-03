@@ -19,4 +19,7 @@ public class QuestionService {
     public List<QuestionDto> getAllQuestions() {
         return questionMapper.questionToQuestionDtoList(questionRepository.findAll());
     }
+    public void saveQuestion (QuestionDto questionDto){
+        questionRepository.save(questionMapper.questionDtoToQuestion(questionDto));
+    }
 }

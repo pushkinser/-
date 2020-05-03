@@ -1,6 +1,6 @@
 ul{
- life-style-type:none;
- background:gray;
+ /*background:gray;*/
+ list-style-type: none;
 }
 .addQ{
     position:fixed;
@@ -11,4 +11,33 @@ ul{
 }
 .divUnderMsg{
  margin-right: 4px;
+ font-size:10px;
+}
+ a {
+    color: black; /* Цвет обычной ссылки */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    font-size:23px;
+   }
+   a:visited {
+    color: #800080; /* Цвет посещённой ссылки */
+   }
+   a:hover {
+    color: #800000; /* Цвет ссылки при наведении на нее курсора мыши */
+    text-decoration: underline; /* Добавляем подчеркивание */
+   }
+.quesArea {
+ width: 100%;
+ height: 100%;
+}
+
+.quest {
+    margin-left:100px;
+    margin-right:100px;
+    padding-left:100px;
+    padding-right:100px;
+}
+
+.textQ{
+    width:100%;
+    height:200px;
 }

@@ -27,6 +27,7 @@ window.onload = function () {
 
 function drawQuestion(question) {
     var questionElement  =  document.createElement('ul');
+        questionElement.setAttribute('class','alert alert-secondary');
 
     var questionMsg = document.createElement('li');
     var hrefMsg = document.createElement('a');
@@ -38,20 +39,20 @@ function drawQuestion(question) {
 
     var underMsg = document.createElement('li');
         underMsg.setAttribute('class','liMsg');
-    var questionUser = document.createElement('div');
-        questionUser.setAttribute('class','divUnderMsg');
+    var questionUser = document.createElement('span');
+        questionUser.setAttribute('class','badge badge-primary divUnderMsg');
     var text = document.createTextNode(question.student.userName);
         questionUser.appendChild(text);
         underMsg.appendChild(questionUser);
 
-    var questionCategory = document.createElement('div');
-        questionCategory.setAttribute('class','divUnderMsg');
+    var questionCategory = document.createElement('span');
+        questionCategory.setAttribute('class','badge badge-primary divUnderMsg');
     var text = document.createTextNode(question.category);
         questionCategory.appendChild(text);
         underMsg.appendChild(questionCategory);
 
-    var questionHardLevel = document.createElement('div');
-        questionHardLevel.setAttribute('class','divUnderMsg');
+    var questionHardLevel = document.createElement('span');
+        questionHardLevel.setAttribute('class','badge badge-primary divUnderMsg');
     var text = document.createTextNode(question.hardLevel);
         questionHardLevel.appendChild(text);
         underMsg.appendChild(questionHardLevel);

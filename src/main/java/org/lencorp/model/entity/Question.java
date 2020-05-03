@@ -23,6 +23,9 @@ public class Question {
     @Column(name = "message")
     private String message;
 
+    @Column(name = "theme")
+    private String theme;
+
     @Column(name = "carma_point")
     private int carmaPoint;
 
