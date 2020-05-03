@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
           integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="css/askQuestion.css">
 
     <title>Len demo</title>
 </head>
@@ -28,9 +28,9 @@
 
     <div class="container col-lg-6">
         <form class="quesArea" id="formx" name="saveQuestion" action="javascript:void(null);" method="POST" onsubmit="callSaveQuestion()">
-            <label>Введите ваш вопрос:
-                <input id="message-input-id" type=text name="message" class="textQ"></label>
-            <label>Выберрите предмет:
+            <label><b>Введите ваш вопрос:</b>
+                <textarea id="message-input-id"  name="message" class="textQ"></textarea></label>
+            <label><b>Выберрите предмет:</b>
                 <input id="theme-input-id" type="text" name="theme"></label>
             <input type="submit" value="Задать вопрос" class="btn btn-success">
         </form>

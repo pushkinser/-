@@ -1,0 +1,16 @@
+.quesArea {
+ width: 100%;
+ height: 100%;
+}
+
+.quest {
+    margin-left:100px;
+    margin-right:100px;
+    padding-left:100px;
+    padding-right:100px;
+}
+
+.textQ{
+    width:100%;
+    height:200px;
+}
