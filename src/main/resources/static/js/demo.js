@@ -17,8 +17,8 @@ window.onload = function () {
             }
             return response.json();
         })
-        .then(products => {
-            products.forEach(function (item, question) {
+        .then(questions => {
+            questions.forEach(function (item, question) {
                 drawQuestion(item);
             });
         })

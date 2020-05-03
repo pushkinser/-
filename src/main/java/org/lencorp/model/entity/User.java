@@ -29,6 +29,9 @@ public class User {
     @Column(name = "email")
     private String email;
 
+    @Column(name = "img_url")
+    private String imgUrl;
+
     @OneToMany(mappedBy = "mentor")
     private List<Answer> answers;
 

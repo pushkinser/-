@@ -1,16 +1,20 @@
 INSERT INTO user_dictionary ( user_name,
                               first_name,
-                              email)
+                              email,
+                              img_url)
                      values ('student',
                              'len',
-                             'len@len.rf');
+                             'len@len.rf',
+                             'https://production-endpoint.azureedge.net/images/64RJGCPO75FJAC1GF0QJ0C0/b670c13b-7e09-4893-9e47-5b1ff948f818/178389_500x500.jpg');
 COMMIT;
 INSERT INTO user_dictionary ( user_name,
                               first_name,
-                              email)
+                              email,
+                              img_url)
                      values ('mentor',
                              'lenKa',
-                             'lenKa@len.rf');
+                             'lenKa@len.rf',
+                             'https://production-endpoint.azureedge.net/images/6KS3ICHJBSQJ0C3O6KO30/ed4cc4b8-f2d3-48fa-adab-1956b6033e2d/58923_500x500.jpg');
 COMMIT;
 INSERT INTO question (message,
                       theme,

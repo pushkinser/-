@@ -9,13 +9,15 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UserDto {
 
-    private int id;
+    private long id;
 
     private String userName;
 
     private String firstName;
 
     private String email;
+
+    private String imgUrl;
 
     //  private List<Answer> answers;
 
