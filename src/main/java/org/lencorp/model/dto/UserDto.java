@@ -20,4 +20,15 @@ public class UserDto {
     //  private List<Answer> answers;
 
     // private List<Question> questions;
+
+
+    @Override
+    public String toString() {
+        return "UserDto{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }

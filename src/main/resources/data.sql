@@ -31,6 +31,21 @@ INSERT INTO question (id,
                       'physics',
                       '1');
 COMMIT;
+INSERT INTO question (id,
+                      message,
+                      carma_point,
+                      hard_level,
+                      chat_mentor,
+                      category,
+                      id_student)
+              VALUES ('2',
+                      'notdsf',
+                      '3',
+                      'EASY',
+                      'FALSE',
+                      'physics',
+                      '1');
+COMMIT;
 INSERT INTO answer (id,
                     message,
                     carma_point,

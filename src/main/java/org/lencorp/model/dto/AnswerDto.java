@@ -20,4 +20,13 @@ public class AnswerDto {
     private User mentor;
 
     private Question question;
+
+    @Override
+    public String toString() {
+        return "AnswerDto{" +
+                "id=" + id +
+                ", message='" + message + '\'' +
+                ", carmaPoint=" + carmaPoint +
+                '}';
+    }
 }

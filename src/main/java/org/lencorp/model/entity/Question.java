@@ -42,5 +42,15 @@ public class Question {
     @OneToMany(mappedBy = "question")
     private List<Answer> answers;
 
-
+    @Override
+    public String toString() {
+        return "Question{" +
+                "id=" + id +
+                ", message='" + message + '\'' +
+                ", carmaPoint=" + carmaPoint +
+                ", hardLevel='" + hardLevel + '\'' +
+                ", chatMentor=" + chatMentor +
+                ", category='" + category + '\'' +
+                '}';
+    }
 }
