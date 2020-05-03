@@ -3,7 +3,11 @@ package org.lencorp.controller;
 import lombok.AllArgsConstructor;
 import org.lencorp.model.dto.QuestionDto;
 import org.lencorp.service.QuestionService;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
@@ -15,17 +19,15 @@ public class QuestionController {
 
     @GetMapping("questions/")
     public List<QuestionDto> getQuestions() {
-       return questionService.getAllQuestions();
+        return questionService.getAllQuestions();
     }
 
-    @PostMapping("saveQuestion/")
-    public QuestionDto saveQuestion (@RequestBody QuestionDto questionForm){
-        QuestionDto questionDto = new QuestionDto();
-        questionDto.setMessage(questionForm.getMessage());
-        questionDto.setTheme(questionForm.getTheme());
-        questionDto.setCategory(questionForm.getCategory());
-        questionService.saveQuestion(questionDto);
-        return questionDto;
+    @PostMapping(value = "/save-question",
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE)
+    public QuestionDto saveQuestion(@RequestBody QuestionDto questionForm) {
+        questionService.saveQuestion(questionForm);
+        return questionForm;
     }
 
 }

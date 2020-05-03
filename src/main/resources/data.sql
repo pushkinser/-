@@ -1,31 +1,25 @@
-INSERT INTO user_dictionary ( id,
-                              user_name,
+INSERT INTO user_dictionary ( user_name,
                               first_name,
                               email)
-                     values ('1',
-                             'student',
+                     values ('student',
                              'len',
                              'len@len.rf');
 COMMIT;
-INSERT INTO user_dictionary ( id,
-                              user_name,
+INSERT INTO user_dictionary ( user_name,
                               first_name,
                               email)
-                     values ('2',
-                             'mentor',
+                     values ('mentor',
                              'lenKa',
                              'lenKa@len.rf');
 COMMIT;
-INSERT INTO question (id,
-                      message,
+INSERT INTO question (message,
                       theme,
                       carma_point,
                       hard_level,
                       chat_mentor,
                       category,
                       id_student)
-              VALUES ('1',
-                      'what is phys?',
+              VALUES ('what is phys?',
                       'phys? is what?',
                       '3',
                       'EASY',
@@ -33,16 +27,14 @@ INSERT INTO question (id,
                       'physics',
                       '1');
 COMMIT;
-INSERT INTO question (id,
-                      message,
+INSERT INTO question (message,
                       theme,
                       carma_point,
                       hard_level,
                       chat_mentor,
                       category,
                       id_student)
-              VALUES ('2',
-                      'notdsf',
+              VALUES ('notdsf',
                       'Atata',
                       '3',
                       'EASY',
@@ -50,13 +42,11 @@ INSERT INTO question (id,
                       'physics',
                       '1');
 COMMIT;
-INSERT INTO answer (id,
-                    message,
+INSERT INTO answer (message,
                     carma_point,
                     id_mentor,
                     id_question)
-              VALUES ('1',
-                      'I`m Ilon Mask',
+              VALUES ('I`m Ilon Mask',
                       '7',
                       '2',
                       '1');
