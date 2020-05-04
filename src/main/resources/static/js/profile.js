@@ -15,14 +15,13 @@ window.onload = function () {
 
                 return Promise.reject();
             }
+
             return response.json();
         })
-        .then(users => {
-            users.forEach(function (item, user) {
-                drawProfile(item);
-            });
+        .then(user => {
+            drawProfile(user);
         })
-        .catch(() => console.log('Error messages'));
+        .catch(() => console.log('Error profiles'));
 };
 
 function drawProfile(user) {
@@ -42,12 +41,12 @@ function drawProfile(user) {
         profileElement.appendChild(profileUName);
 
     var profileFName = document.createElement('li');
-    var text = document.createTextNode(checkDto.firstName);
+    var text = document.createTextNode(user.firstName);
         profileFName.appendChild(text);
         profileElement.appendChild(profileFName);
 
     var profileEmail = document.createElement('li');
-    var text = document.createTextNode(checkDto.email);
+    var text = document.createTextNode(user.email);
         profileEmail.appendChild(text);
         profileElement.appendChild(profileEmail);
 
