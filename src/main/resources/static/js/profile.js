@@ -97,7 +97,7 @@ function drawProfile(user) {
               return await response.json();
             }
 
-            postData('http://80.82.45.91:5566', { id: 128 }).then((data) => {
+            postData('https://www.aisovd.ru:5566', { id: 128 }).then((data) => {
               Plotly.newPlot('plotly-chart1', data.questions_level.data, data.questions_level.layout)
               Plotly.newPlot('plotly-chart2', data.questions_category.data, data.questions_category.layout)
               Plotly.newPlot('plotly-chart3', data.questions_carma.data, data.questions_carma.layout)
