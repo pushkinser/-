@@ -61,28 +61,51 @@ function drawProfile(user) {
         button.setAttribute('class', 'btn btn-primary btnForm');
     var text = document.createTextNode('Аналитика вопросов');
         button.appendChild(text);
-       /* button.onclick = function () {
-        fetch("addCheck",
-            {
-                method: "POST",
-                body: JSON.stringify({id: checkDto.id}),
+        button.onclick = function () {
+            var div1 = document.createElement('div');
+                div1.setAttribute('id', 'plotly-chart1');
+            var div2 = document.createElement('div');
+                div2.setAttribute('id', 'plotly-chart2');
+            var div3 = document.createElement('div');
+                div3.setAttribute('id', 'plotly-chart3');
+            var div4 = document.createElement('div');
+                div4.setAttribute('id', 'plotly-chart4');
+            var div5 = document.createElement('div');
+                div5.setAttribute('id', 'plotly-chart5');
+            var div6 = document.createElement('div');
+                div6.setAttribute('id', 'plotly-chart6');
+
+            profileArea.appendChild(div1);
+            profileArea.appendChild(div2);
+            profileArea.appendChild(div3);
+            profileArea.appendChild(div4);
+            profileArea.appendChild(div5);
+            profileArea.appendChild(div6);
+
+            async function postData(url = '', data = {}) {
+
+              const response = await fetch(url, {
+                method: 'POST', mode: 'cors',
+            credentials: 'same-origin',
+                cache: 'no-cache',
                 headers: {
-                    'Accept': 'application/json',
-                    'Content-type': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.status != 200) {
-                    return Promise.reject();
-                }
-            })
-            .then(() => {
-                console.log('indusi');
-                getChecks();
-                getBasketChecks();
-            })
-            .catch(() => console.log('Error check'));
-            };*/
+                  'Content-Type': 'application/json'
+                },
+
+              body: JSON.stringify(data)
+              });
+              return await response.json();
+            }
+
+            postData('http://80.82.45.91:5566', { id: 128 }).then((data) => {
+                Plotly.newPlot('plotly-chart1', data.questions_level)
+            	Plotly.newPlot('plotly-chart2', data.questions_category)
+            	Plotly.newPlot('plotly-chart3', data.questions_carma)
+            	Plotly.newPlot('plotly-chart4', data.answer_level)
+            	Plotly.newPlot('plotly-chart5', data.answer_category)
+            	Plotly.newPlot('plotly-chart6', data.answer_carma)
+              });
+            };
         profileBut.appendChild(button);
         profileElement.appendChild(profileBut);
 
