@@ -3,8 +3,6 @@ package org.lencorp.model.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.lencorp.model.entity.Question;
-import org.lencorp.model.entity.User;
 
 @Data
 @AllArgsConstructor
@@ -17,9 +15,9 @@ public class AnswerDto {
 
     private int carmaPoint;
 
-    private User mentor;
+    private UserDto mentor;
 
-    private Question question;
+    private QuestionDto question;
 
     @Override
     public String toString() {

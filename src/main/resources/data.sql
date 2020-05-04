@@ -55,3 +55,13 @@ INSERT INTO answer (message,
                       '2',
                       '1');
 COMMIT;
+
+INSERT INTO answer (message,
+                    carma_point,
+                    id_mentor,
+                    id_question)
+              VALUES ('Js is shit',
+                      '7',
+                      '2',
+                      '1');
+COMMIT;

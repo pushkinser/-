@@ -12,31 +12,26 @@
     <title>Len</title>
 </head>
 <body>
-
+<nav class="navbar navbar-expand-lg navbar-light bg-light alert alert-info">
+    <a class="navbar-brand navbar-collapse">ЛЁrН</a>
+    <a href="/profile.html" class="btn btn-link">
+        <svg class="bi bi-person" width="2em" height="2em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" d="M13 14s1 0 1-1-1-4-6-4-6 3-6 4 1 1 1 1h10zm-9.995-.944v-.002.002zM3.022 13h9.956a.274.274 0 00.014-.002l.008-.002c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10c-2.29 0-3.516.68-4.168 1.332-.678.678-.83 1.418-.832 1.664a1.05 1.05 0 00.022.004zm9.974.056v-.002.002zM8 7a2 2 0 100-4 2 2 0 000 4zm3-2a3 3 0 11-6 0 3 3 0 016 0z" clip-rule="evenodd"/>
+        </svg>
+    </a>
+</nav>
 <div class="parent">
-    <div class="question-block jumbotron">
+    <div class="question-block jumbotron clsMrgn">
         Question?
     </div>
 
-    <div class="answer-block jumbotron" id="answer-id1">
-        Answer1
+    <div class="answer-block row clsMrgn" id="answer-id1">
     </div>
-    <div class="answer-block jumbotron" id="answer-id2">
-        Answer2
-        <div class="btn-group-vertical">
-            <button type="button" class="btn btn-secondary">↑</button>
-            <button type="button" class="btn btn-secondary" disabled="true">
-                <label>
-                    +0
-                </label>
-            </button>
-            <button type="button" class="btn btn-secondary">↓</button>
-        </div>
-    </div>
-    <div class="answer-block-input jumbotron">
+
+    <div class="answer-block-input clsMrgn">
         <form>
             <div class="form-group">
-                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Ответ можно написать здесь">
+                <textarea  class="form-control" id="exampleInputPassword1" placeholder="Ответ можно написать здесь"></textarea>
             </div>
             <button type="submit" class="btn btn-success">Ответить</button>
         </form>
@@ -50,8 +45,10 @@
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="js/question.js"/>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
 </body>
 </html>

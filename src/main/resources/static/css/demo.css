@@ -25,3 +25,6 @@ ul{
     color: #800000; /* Цвет ссылки при наведении на нее курсора мыши */
     text-decoration: underline; /* Добавляем подчеркивание */
    }
+#question-area{
+    margin-top:50px;
+}

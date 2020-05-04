@@ -18,8 +18,9 @@
     left:20%;
 }
 .divPr{
-    position:relative;
-    left:30%;
+    margin-top:50px;
+   /* position:relative;
+    left:30%;*/
 }
 .txPr{
     text-align:center;

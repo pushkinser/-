@@ -27,7 +27,7 @@ window.onload = function () {
 
 function drawQuestion(question) {
     var questionElement  =  document.createElement('ul');
-        questionElement.setAttribute('class','alert alert-secondary');
+        questionElement.setAttribute('class','alert alert-info');
 
     var questionMsg = document.createElement('li');
     var hrefMsg = document.createElement('a');
@@ -63,11 +63,4 @@ function drawQuestion(question) {
 
 
     questionArea.appendChild(questionElement);
-}
-
-function launch_toast() {
-
-    var x = document.getElementById("toast");
-    x.className = "show";
-    setTimeout(function() { x.className = x.className.replace("show", ""); }, 2000);
 }
