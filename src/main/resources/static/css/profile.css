@@ -13,3 +13,21 @@
 .container {
     padding: 2px 16px;
 }
+.btnAn{
+    position:relative;
+    left:20%;
+}
+.divPr{
+    position:relative;
+    left:30%;
+}
+.txPr{
+    text-align:center;
+}
+.btnForm {
+    margin-right: 4px;
+}
+ul{
+ /*background:gray;*/
+ list-style-type: none;
+}

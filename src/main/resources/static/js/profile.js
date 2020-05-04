@@ -36,24 +36,29 @@ function drawProfile(user) {
         profileElement.appendChild(profileImg);
 
     var profileUName = document.createElement('li');
+        profileUName.setAttribute('class','txPr');
     var text = document.createTextNode(user.userName);
         profileUName.appendChild(text);
         profileElement.appendChild(profileUName);
 
     var profileFName = document.createElement('li');
+        profileFName.setAttribute('class','txPr');
     var text = document.createTextNode(user.firstName);
         profileFName.appendChild(text);
         profileElement.appendChild(profileFName);
 
     var profileEmail = document.createElement('li');
+        profileEmail.setAttribute('class','txPr');
     var text = document.createTextNode(user.email);
         profileEmail.appendChild(text);
         profileElement.appendChild(profileEmail);
 
-    var profileBut = document.createElement('li');
+    var profileButLi = document.createElement('li');
+    var profileBut = document.createElement('div');
+        profileBut.setAttribute('class','row btnAn');
     var button = document.createElement('button');
         button.setAttribute('type', 'button');
-        button.setAttribute('class', 'btn btn-primary');
+        button.setAttribute('class', 'btn btn-primary btnForm');
     var text = document.createTextNode('Аналитика вопросов');
         button.appendChild(text);
        /* button.onclick = function () {
@@ -81,10 +86,9 @@ function drawProfile(user) {
         profileBut.appendChild(button);
         profileElement.appendChild(profileBut);
 
-         var profileBut = document.createElement('li');
             var button = document.createElement('button');
                 button.setAttribute('type', 'button');
-                button.setAttribute('class', 'btn btn-primary');
+                button.setAttribute('class', 'btn btn-primary btnForm');
             var text = document.createTextNode('Аналитика ответов');
                 button.appendChild(text);
                /* button.onclick = function () {
@@ -110,7 +114,8 @@ function drawProfile(user) {
                     .catch(() => console.log('Error check'));
                     };*/
                 profileBut.appendChild(button);
-                profileElement.appendChild(profileBut);
+                profileButLi.appendChild(profileBut);
+                profileElement.appendChild(profileButLi);
 
                 profileArea.appendChild(profileElement);
 
