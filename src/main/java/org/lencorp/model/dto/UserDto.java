@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UserDto {
 
-    private int id;
+    private long id;
 
     private String userName;
 
@@ -17,7 +17,20 @@ public class UserDto {
 
     private String email;
 
+    private String imgUrl;
+
     //  private List<Answer> answers;
 
     // private List<Question> questions;
+
+
+    @Override
+    public String toString() {
+        return "UserDto{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }

@@ -3,7 +3,6 @@ package org.lencorp.model.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.lencorp.model.entity.User;
 
 @Data
 @AllArgsConstructor
@@ -14,6 +13,8 @@ public class QuestionDto {
 
     private String message;
 
+    private String theme;
+
     private int carmaPoint;
 
     private String hardLevel;
@@ -22,8 +23,20 @@ public class QuestionDto {
 
     private String category;
 
-    private User student;
+    private UserDto student;
 
     // private List<Answer> answers;
 
+
+    @Override
+    public String toString() {
+        return "QuestionDto{" +
+                "id=" + id +
+                ", message='" + message + '\'' +
+                ", carmaPoint=" + carmaPoint +
+                ", hardLevel='" + hardLevel + '\'' +
+                ", chatMentor=" + chatMentor +
+                ", category='" + category +
+                '}';
+    }
 }

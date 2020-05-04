@@ -5,11 +5,13 @@ CREATE TABLE IF NOT EXISTS public.user_dictionary (
   id          SERIAL PRIMARY KEY,
   user_name   VARCHAR NOT NULL,
   first_name  VARCHAR NOT NULL,
-  email VARCHAR NOT NULL
+  email VARCHAR NOT NULL,
+  img_url VARCHAR
   );
 CREATE TABLE IF NOT EXISTS public.question (
   id    SERIAL PRIMARY KEY,
   message  VARCHAR NOT NULL,
+  theme VARCHAR NOT NULL,
   carma_point INT,
   hard_level VARCHAR NOT NULL,
   chat_mentor BOOLEAN,

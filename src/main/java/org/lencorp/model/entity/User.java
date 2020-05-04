@@ -29,9 +29,22 @@ public class User {
     @Column(name = "email")
     private String email;
 
+    @Column(name = "img_url")
+    private String imgUrl;
+
     @OneToMany(mappedBy = "mentor")
     private List<Answer> answers;
 
     @OneToMany(mappedBy = "student")
     private List<Question> questions;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }

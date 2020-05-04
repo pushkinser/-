@@ -23,6 +23,9 @@ public class Question {
     @Column(name = "message")
     private String message;
 
+    @Column(name = "theme")
+    private String theme;
+
     @Column(name = "carma_point")
     private int carmaPoint;
 
@@ -42,5 +45,15 @@ public class Question {
     @OneToMany(mappedBy = "question")
     private List<Answer> answers;
 
-
+    @Override
+    public String toString() {
+        return "Question{" +
+                "id=" + id +
+                ", message='" + message + '\'' +
+                ", carmaPoint=" + carmaPoint +
+                ", hardLevel='" + hardLevel + '\'' +
+                ", chatMentor=" + chatMentor +
+                ", category='" + category + '\'' +
+                '}';
+    }
 }
