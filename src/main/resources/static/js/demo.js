@@ -31,9 +31,31 @@ function drawQuestion(question) {
 
     var questionMsg = document.createElement('li');
     var hrefMsg = document.createElement('a');
-        hrefMsg.setAttribute('href','https:/');
-    var text = document.createTextNode(question.message);
+        hrefMsg.setAttribute('href','http://localhost:8073/question');
+    var text = document.createTextNode(question.theme);
         hrefMsg.appendChild(text);
+        hrefMsg.onclick = function () {
+            fetch("/question",
+                        {
+                            method: "POST",
+                            body: JSON.stringify({id: question.id}),
+                            headers: {
+                                'Accept': 'application/json',
+                                'Content-type': 'application/json'
+                            }
+                        })
+                        .then(response => {
+                            if (response.status != 200) {
+                                return Promise.reject();
+                            }
+                        })
+                        .then(() => {
+                            console.log('indusi');
+                            getChecks();
+                            getBasketChecks();
+                        })
+                        .catch(() => console.log('Error check'));
+                };
         questionMsg.appendChild(hrefMsg);
         questionElement.appendChild(questionMsg);
 

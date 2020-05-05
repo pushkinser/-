@@ -1,7 +1,27 @@
 'use strict';
 let answerArea = document.querySelector('#answer-id1');
-
+let questArea = document.querySelector('#quest-block');
 window.onload = function () {
+    fetch("/questionid",
+            {
+                method: "GET",
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.status !== 200) {
+
+                    return Promise.reject();
+                }
+                return response.json();
+            })
+            .then(answer => {
+               var text = document.createTextNode(answer.message);
+                    questArea.appendChild(text);;
+            })
+            .catch(() => console.log('Error messages'));
     fetch("answers/",
         {
             method: "GET",

@@ -32,4 +32,8 @@ public class QuestionService {
         questionDto.setStudent(userMapper.userToUserDto(user));
         questionRepository.save(questionMapper.questionDtoToQuestion(questionDto));
     }
+
+    public QuestionDto getQuestion (Long id){
+        return questionMapper.questionToQuestionDto(questionRepository.findQuestionById(id));
+    }
 }
