@@ -13,3 +13,7 @@ function callSaveQuestion() {
         .then(res => console.log(res));
 
 }
+function fastPop() {
+    console.log("HALO");
+    prompt('Введите вознагрождение:');
+}
