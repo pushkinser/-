@@ -28,12 +28,13 @@
 
     <div class="container col-lg-6">
         <form class="quesArea" id="formx" name="saveQuestion" action="javascript:void(null);" method="POST" onsubmit="callSaveQuestion()">
+
             <label><b>Введите ваш вопрос:</b>
                 <textarea id="message-input-id"  name="message" class="textQ"></textarea></label>
             <label><b>Выберрите предмет:</b>
                 <input id="theme-input-id" type="text" name="theme"></label>
             <input type="submit" value="Задать вопрос" class="btn btn-success">
-            <input type="submit" value="Быстрый вопрос" class="btn btn-primary">
+            <input type="button" value="Быстрый вопрос" class="btn btn-primary"  onclick="fastPop()">
         </form>
     </div>
     <div class="container col-lg-6">

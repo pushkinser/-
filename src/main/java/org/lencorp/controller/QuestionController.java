@@ -4,10 +4,8 @@ import lombok.AllArgsConstructor;
 import org.lencorp.model.dto.QuestionDto;
 import org.lencorp.service.QuestionService;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
 
@@ -28,6 +26,16 @@ public class QuestionController {
     public QuestionDto saveQuestion(@RequestBody QuestionDto questionForm) {
         questionService.saveQuestion(questionForm);
         return questionForm;
+    }
+
+    @PostMapping ("/question")
+    public String getQuestion (@RequestBody QuestionDto questionDto){
+        return "redirect:/question/{"+questionDto.getId()+"}";
+    }
+    @GetMapping ("/questionid")
+    public QuestionDto getQuestionById (){
+        QuestionDto questionDto = questionService.getQuestion(1L);
+        return questionDto;
     }
 
 }
